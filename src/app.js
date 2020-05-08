@@ -9,8 +9,6 @@ app.use(cors());
 
 const repositories = [];
 
-const likes = [];
-
 app.get("/repositories", (request, response) => {
     return response.json(repositories);
 });
