@@ -14,12 +14,12 @@ app.get("/repositories", (request, response) => {
 });
 
 app.post("/repositories", (request, response) => {
-    //const { title, url, techs } = request.body;
+    const { title, url, techs } = request.body;
     const repository = {  id: uuid(),
                           likes: 0,
-                          techs: ["Node", "Express", "TypeScript"],                    
-                          title: "Umbriel",
-                          url: "https://github.com/Rocketseat/umbriel", 
+                          techs,                    
+                          title,
+                          url 
                         };
     repositories.push(repository);
     return response.json(repository);
